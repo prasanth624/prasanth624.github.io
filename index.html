@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prasanth B | Cloud DevOps Engineer</title>
+    <title>Prasanth Bala | Cloud DevOps Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -267,14 +267,31 @@
             margin-bottom: 1rem;
             animation: fadeInUp 0.8s ease 0.2s both;
         }
+        
+        .hero-content {
+            padding-left: 5rem;   /* 👈 move content right */
+        }
+        
+        @media (max-width: 1024px) {
+            .hero-content {
+                padding-left: 0;
+            }
+        }
+        
+        .hero-stats {
+            justify-content: flex-start;
+        }
 
         .hero-title .greeting {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--text-muted);
+            font-size: 3rem;
+            font-weight: 900;    
+            color: #ffffff;      
             display: block;
             margin-bottom: 0.5rem;
+            letter-spacing: 0.3px; /* optional, looks premium */
         }
+
+
 
         .hero-title .name {
             background: var(--gradient-1);
@@ -424,23 +441,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 6rem;
-            color: white;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.35);
+            font-size: 35px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 2px;
+            text-align: center;
         }
-
-        .hero-avatar::before {
-            content: 'PB';
-            font-weight: 900;
-            font-size: 5rem;
+        
+        .hero-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+            background: #0b0f14;
         }
-
+        
         .orbit-ring {
             position: absolute;
             border: 1px dashed rgba(99, 102, 241, 0.3);
@@ -464,27 +486,79 @@
 
         @keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
 
-        .floating-icon {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--card-border);
-            animation: floatIcon 3s ease-in-out infinite;
-            z-index: 3;
-        }
+.hero-image-wrapper > .floating-icon {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    animation: floatIcon 5s ease-in-out infinite;
+    z-index: 3;
+    opacity: 1;
 
-        .floating-icon:nth-child(1) { top: 10%; right: 5%; background: rgba(255, 153, 0, 0.2); color: #ff9900; animation-delay: 0s; }
-        .floating-icon:nth-child(2) { top: 50%; right: -5%; background: rgba(0, 123, 255, 0.2); color: #007bff; animation-delay: 0.5s; }
-        .floating-icon:nth-child(3) { bottom: 10%; right: 10%; background: rgba(50, 120, 200, 0.2); color: #3278c8; animation-delay: 1s; }
-        .floating-icon:nth-child(4) { bottom: 5%; left: 10%; background: rgba(6, 182, 212, 0.2); color: #06b6d4; animation-delay: 1.5s; }
-        .floating-icon:nth-child(5) { top: 5%; left: 5%; background: rgba(209, 61, 16, 0.2); color: #d13d10; animation-delay: 2s; }
-        .floating-icon:nth-child(6) { top: 40%; left: -5%; background: rgba(36, 150, 237, 0.2); color: #2496ed; animation-delay: 2.5s; }
+    /* IMPORTANT */
+    backdrop-filter: none;
+}
+
+
+/* AWS */
+.hero-image-wrapper > .floating-icon:nth-of-type(1) {
+    top: 8%;
+    right: 10%;
+    background: #ff9900;
+    color: #1a1a1a;
+    box-shadow: 0 0 18px rgba(255,153,0,0.6);
+}
+
+/* Azure */
+.hero-image-wrapper > .floating-icon:nth-of-type(2) {
+    top: 28%;
+    right: -6%;
+    background: #007bff;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(0,123,255,0.6);
+}
+
+/* GCP */
+.hero-image-wrapper > .floating-icon:nth-of-type(3) {
+    top: 50%;
+    right: -8%;
+    background: #4285f4;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(66,133,244,0.6);
+}
+
+/* Kubernetes */
+.hero-image-wrapper > .floating-icon:nth-of-type(4) {
+    bottom: 28%;
+    right: -6%;
+    background: #326ce5;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(50,108,229,0.6);
+}
+
+/* Git */
+.hero-image-wrapper > .floating-icon:nth-of-type(5) {
+    bottom: 8%;
+    right: 10%;
+    background: #f05033;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(240,80,51,0.6);
+}
+
+/* Docker */
+.hero-image-wrapper > .floating-icon:nth-of-type(6) {
+    top: 50%;
+    right: 14%;
+    background: #2496ed;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(36,150,237,0.6);
+}
+
 
         @keyframes floatIcon {
             0%, 100% { transform: translateY(0px); }
@@ -757,36 +831,46 @@
             height: 3px;
         }
 
-        .skill-category:nth-child(1)::before { background: var(--gradient-1); }
-        .skill-category:nth-child(2)::before { background: var(--gradient-3); }
-        .skill-category:nth-child(3)::before { background: var(--gradient-2); }
-        .skill-category:nth-child(4)::before { background: linear-gradient(135deg, #8b5cf6, #ec4899); }
-        .skill-category:nth-child(5)::before { background: linear-gradient(135deg, #14b8a6, #3b82f6); }
-        .skill-category:nth-child(6)::before { background: linear-gradient(135deg, #f43f5e, #f59e0b); }
-
+                /* Top Gradient Borders */
+        .skill-category:nth-child(1)::before { background: linear-gradient(135deg,#6366f1,#06b6d4); } /* Cloud */
+        .skill-category:nth-child(2)::before { background: linear-gradient(135deg,#10b981,#14b8a6); } /* IaC */
+        .skill-category:nth-child(3)::before { background: linear-gradient(135deg,#f59e0b,#ef4444); } /* Containers */
+        .skill-category:nth-child(4)::before { background: linear-gradient(135deg,#8b5cf6,#ec4899); } /* CI/CD */
+        .skill-category:nth-child(5)::before { background: linear-gradient(135deg,#06b6d4,#3b82f6); } /* Monitoring */
+        .skill-category:nth-child(6)::before { background: linear-gradient(135deg,#f43f5e,#fb7185); } /* Security */
+        .skill-category:nth-child(7)::before { background: linear-gradient(135deg,#6366f1,#a855f7); } /* AI/ML */
+        .skill-category:nth-child(8)::before { background: linear-gradient(135deg,#22c55e,#84cc16); } /* Networking */
+        
+        
+        /* Header Layout */
         .category-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            display:flex;
+            align-items:center;
+            gap:1rem;
+            margin-bottom:1.5rem;
         }
-
-        .category-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
+        
+        /* Icon Style */
+        .category-icon{
+            width:50px;
+            height:50px;
+            border-radius:12px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:1.3rem;
         }
-
-        .skill-category:nth-child(1) .category-icon { background: rgba(99, 102, 241, 0.15); color: var(--primary-light); }
-        .skill-category:nth-child(2) .category-icon { background: rgba(16, 185, 129, 0.15); color: #10b981; }
-        .skill-category:nth-child(3) .category-icon { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
-        .skill-category:nth-child(4) .category-icon { background: rgba(139, 92, 246, 0.15); color: #8b5cf6; }
-        .skill-category:nth-child(5) .category-icon { background: rgba(20, 184, 166, 0.15); color: #14b8a6; }
-        .skill-category:nth-child(6) .category-icon { background: rgba(244, 63, 94, 0.15); color: #f43f5e; }
+        
+        
+        /* Icon Colors */
+        .skill-category:nth-child(1) .category-icon { background:rgba(99,102,241,0.15); color:#6366f1; }
+        .skill-category:nth-child(2) .category-icon { background:rgba(16,185,129,0.15); color:#10b981; }
+        .skill-category:nth-child(3) .category-icon { background:rgba(245,158,11,0.15); color:#f59e0b; }
+        .skill-category:nth-child(4) .category-icon { background:rgba(139,92,246,0.15); color:#8b5cf6; }
+        .skill-category:nth-child(5) .category-icon { background:rgba(6,182,212,0.15); color:#06b6d4; }
+        .skill-category:nth-child(6) .category-icon { background:rgba(244,63,94,0.15); color:#f43f5e; }
+        .skill-category:nth-child(7) .category-icon { background:rgba(168,85,247,0.15); color:#a855f7; }
+        .skill-category:nth-child(8) .category-icon { background:rgba(34,197,94,0.15); color:#22c55e; }
 
         .category-title {
             font-size: 1.2rem;
@@ -1605,7 +1689,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>Prasanth B<span class="logo-bracket">/&gt;</span>
+                <span class="logo-bracket">&lt;</span>Prasanth Bala<span class="logo-bracket">/&gt;</span>
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" onclick="closeMenu()">Home</a></li>
@@ -1634,8 +1718,8 @@
                     Available for Opportunities
                 </div>
                 <h1 class="hero-title">
-                    <span class="greeting">Hello, I'm</span>
-                    <span class="name">Prasanth B</span>
+                    <span class="greeting">Hi, I'm</span>
+                    <span class="name">Prasanth Bala</span>
                     <span class="role">Cloud & DevOps Engineer</span>
                 </h1>
                 <p class="hero-description">
@@ -1649,15 +1733,15 @@
                         <div class="stat-label">Years Exp.</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="50">0</span>+</div>
+                        <div class="stat-number"><span class="counter" data-target="20">0</span>+</div>
                         <div class="stat-label">Projects</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="20">0</span>+</div>
+                        <div class="stat-number"><span class="counter" data-target="50">0</span>+</div>
                         <div class="stat-label">Tools</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number"><span class="counter" data-target="99">0</span>%</div>
+                        <div class="stat-number"><span class="counter" data-target="99.99">0</span>%</div>
                         <div class="stat-label">Uptime</div>
                     </div>
                 </div>
@@ -1670,16 +1754,45 @@
                     </a>
                 </div>
                 <div class="hero-social">
-                    <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link" title="Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="social-link" title="Medium"><i class="fab fa-medium"></i></a>
-                    <a href="#" class="social-link" title="Dev.to"><i class="fab fa-dev"></i></a>
+                    <a 
+                        href="https://github.com/prasanth624"
+                        class="social-link"
+                        title="GitHub"
+                        aria-label="GitHub profile"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+                
+                    <a 
+                        href="https://www.linkedin.com/in/prasanth-ai"
+                        class="social-link"
+                        title="LinkedIn"
+                        aria-label="Linkedin profile"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                
+                    <a 
+                        href="https://medium.com/@bprasanth3456"
+                        class="social-link"
+                        title="Medium"
+                        aria-label="Medium profile"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fab fa-medium"></i>
+                    </a>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="hero-image-wrapper">
-                    <div class="hero-avatar"></div>
+                    <div class="hero-avatar">
+                        Prasanth Bala
+                    </div>
                     <div class="orbit-ring orbit-ring-1"></div>
                     <div class="orbit-ring orbit-ring-2"></div>
                     <div class="floating-icon"><i class="fab fa-aws"></i></div>
@@ -1687,6 +1800,9 @@
                     <div class="floating-icon"><i class="fab fa-google"></i></div>
                     <div class="floating-icon"><i class="fas fa-dharmachakra"></i></div>
                     <div class="floating-icon"><i class="fab fa-git-alt"></i></div>
+                    <div class="floating-icon"><i class="fab fa-azure"></i></div>
+                    <div class="floating-icon"><i class="fab fa-Kubernetes"></i></div>
+                    <div class="floating-icon"><i class="fab fa-ArgoCD"></i></div>
                     <div class="floating-icon"><i class="fab fa-docker"></i></div>
                 </div>
                 <div class="terminal-card">
@@ -1701,7 +1817,7 @@
                             <span class="command">kubectl get pods</span>
                         </div>
                         <div class="terminal-line">
-                            <span class="output">All systems running ✓</span>
+                            <span class="output">All pods running ✓</span>
                         </div>
                         <div class="terminal-line">
                             <span class="prompt">prasanth@cloud:~$ </span>
@@ -1732,7 +1848,7 @@
                 <div class="about-content reveal">
                     <h3>Building the Future of <span style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Infrastructure</span></h3>
                     <p>
-                        I'm Prasanth B, a Cloud DevOps Engineer with a passion for designing and implementing 
+                        I'm Prasanth Bala, a Cloud DevOps Engineer with a passion for designing and implementing 
                         cloud-native architectures that are scalable, secure, and cost-effective. I specialize in 
                         automating deployment pipelines, managing containerized workloads, and building infrastructure as code.
                     </p>
@@ -1775,7 +1891,7 @@
                                 <div class="info-icon"><i class="fas fa-user"></i></div>
                                 <div>
                                     <div class="info-label">Full Name</div>
-                                    <div class="info-value">Prasanth B</div>
+                                    <div class="info-value">Prasanth Bala</div>
                                 </div>
                             </div>
                             <div class="info-item">
@@ -1851,48 +1967,6 @@
                     </div>
                 </div>
 
-                <!-- Container & Orchestration -->
-                <div class="skill-category reveal">
-                    <div class="category-header">
-                        <div class="category-icon"><i class="fas fa-cubes"></i></div>
-                        <div>
-                            <div class="category-title">Containers & Orchestration</div>
-                            <div class="category-desc">Containerized workloads</div>
-                        </div>
-                    </div>
-                    <div class="skills-grid">
-                        <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
-                        <span class="skill-tag"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
-                        <span class="skill-tag"><i class="fas fa-ship"></i> Helm</span>
-                        <span class="skill-tag"><i class="fas fa-layer-group"></i> Istio</span>
-                        <span class="skill-tag"><i class="fas fa-network-wired"></i> Podman</span>
-                        <span class="skill-tag"><i class="fas fa-boxes-stacked"></i> Docker Compose</span>
-                        <span class="skill-tag"><i class="fas fa-cube"></i> Kustomize</span>
-                        <span class="skill-tag"><i class="fas fa-wind"></i> Containerd</span>
-                    </div>
-                </div>
-
-                <!-- CI/CD -->
-                <div class="skill-category reveal">
-                    <div class="category-header">
-                        <div class="category-icon"><i class="fas fa-infinity"></i></div>
-                        <div>
-                            <div class="category-title">CI/CD & GitOps</div>
-                            <div class="category-desc">Automated pipelines</div>
-                        </div>
-                    </div>
-                    <div class="skills-grid">
-                        <span class="skill-tag"><i class="fab fa-jenkins"></i> Jenkins</span>
-                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub Actions</span>
-                        <span class="skill-tag"><i class="fab fa-gitlab"></i> GitLab CI</span>
-                        <span class="skill-tag"><i class="fas fa-circle-nodes"></i> ArgoCD</span>
-                        <span class="skill-tag"><i class="fas fa-code-merge"></i> FluxCD</span>
-                        <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure DevOps</span>
-                        <span class="skill-tag"><i class="fas fa-circle-check"></i> CircleCI</span>
-                        <span class="skill-tag"><i class="fas fa-code-branch"></i> Tekton</span>
-                    </div>
-                </div>
-
                 <!-- IaC & Configuration -->
                 <div class="skill-category reveal">
                     <div class="category-header">
@@ -1908,9 +1982,48 @@
                         <span class="skill-tag"><i class="fas fa-layer-group"></i> Pulumi</span>
                         <span class="skill-tag"><i class="fab fa-aws"></i> CloudFormation</span>
                         <span class="skill-tag"><i class="fas fa-puzzle-piece"></i> Packer</span>
-                        <span class="skill-tag"><i class="fas fa-network-wired"></i> Crossplane</span>
                         <span class="skill-tag"><i class="fas fa-gem"></i> Chef</span>
                         <span class="skill-tag"><i class="fas fa-puppet"></i> Puppet</span>
+                    </div>
+                </div>
+
+                <!-- Container & Orchestration -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-cubes"></i></div>
+                        <div>
+                            <div class="category-title">Containers & Orchestration</div>
+                            <div class="category-desc">Containerized workloads</div>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="skill-tag"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                        <span class="skill-tag"><i class="fas fa-ship"></i> Helm</span>
+                        <span class="skill-tag"><i class="fas fa-layer-group"></i> Istio/Nginx Ingress</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> Podman</span>
+                        <span class="skill-tag"><i class="fas fa-boxes-stacked"></i> Docker Compose</span>
+                        <span class="skill-tag"><i class="fas fa-cube"></i> Kustomize</span>
+                        <span class="skill-tag"><i class="fas fa-wind"></i> Karpenter & Keda</span>
+                    </div>
+                </div>
+
+                <!-- CI/CD -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-infinity"></i></div>
+                        <div>
+                            <div class="category-title">CI/CD & GitOps</div>
+                            <div class="category-desc">Automated pipelines</div>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fab fa-jenkins"></i> Jenkins</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub Actions</span>
+                        <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure DevOps</span>
+                        <span class="skill-tag"><i class="fas fa-circle-nodes"></i> ArgoCD</span>
+                        <span class="skill-tag"><i class="fab fa-gitlab"></i> GitLab CI</span>
+                        
                     </div>
                 </div>
 
@@ -1928,13 +2041,51 @@
                         <span class="skill-tag"><i class="fas fa-chart-area"></i> Grafana</span>
                         <span class="skill-tag"><i class="fas fa-search"></i> ELK Stack</span>
                         <span class="skill-tag"><i class="fas fa-dog"></i> Datadog</span>
-                        <span class="skill-tag"><i class="fas fa-bell"></i> PagerDuty</span>
-                        <span class="skill-tag"><i class="fas fa-wave-square"></i> Jaeger</span>
                         <span class="skill-tag"><i class="fas fa-database"></i> Loki</span>
                         <span class="skill-tag"><i class="fas fa-eye"></i> New Relic</span>
                     </div>
                 </div>
-
+                
+                <!-- Security & DevSecOps -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-shield-halved"></i></div>
+                        <div>
+                            <div class="category-title">Security & DevSecOps</div>
+                            <div class="category-desc">Secure pipelines & infrastructure</div>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fas fa-bug"></i> Snyk</span>
+                        <span class="skill-tag"><i class="fas fa-search"></i> SonarQube</span>
+                        <span class="skill-tag"><i class="fas fa-shield-virus"></i> Trivy</span>
+                        <span class="skill-tag"><i class="fas fa-lock"></i> HashiCorp Vault</span>
+                        <span class="skill-tag"><i class="fas fa-user-shield"></i> IAM</span>
+                        <span class="skill-tag"><i class="fas fa-key"></i> Secrets Management</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> Zero Trust</span>
+                    </div>
+                </div>
+                
+                <!-- AI/ML -->
+                <div class="skill-category reveal">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <div class="category-title">AI / ML</div>
+                            <div class="category-desc">Artificial Intelligence Tools</div>
+                        </div>
+                    </div>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fas fa-robot"></i> LLM</span>
+                        <span class="skill-tag"><i class="fas fa-brain"></i> RAG</span>
+                        <span class="skill-tag"><i class="fas fa-diagram-project"></i> Langfuse</span>
+                        <span class="skill-tag"><i class="fas fa-cloud"></i> Langchain/Langraph</span>
+                        <span class="skill-tag"><i class="fas fa-cubes"></i> GPU/TPU</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> Data Pipelines</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> MLOps</span>
+                    </div>
+                </div>
+                
                 <!-- Scripting & Tools -->
                 <div class="skill-category reveal">
                     <div class="category-header">
@@ -1947,6 +2098,7 @@
                     <div class="skills-grid">
                         <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
                         <span class="skill-tag"><i class="fas fa-terminal"></i> Bash/Shell</span>
+                        <span class="skill-tag"><i class="fas fa-terminal"></i> Powershell</span>
                         <span class="skill-tag"><i class="fab fa-golang"></i> Go</span>
                         <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
                         <span class="skill-tag"><i class="fab fa-linux"></i> Linux</span>
@@ -2081,111 +2233,192 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="section" id="projects">
-        <div class="section-container">
+        <section class="section" id="projects">
+            <div class="section-container">
             <div class="section-header reveal">
                 <span class="section-tag"><i class="fas fa-folder-open"></i> Projects</span>
                 <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
                 <p class="section-subtitle">Real-world projects showcasing cloud architecture and DevOps excellence</p>
             </div>
-
+        
             <div class="projects-grid">
+        
+                <!-- AWS Infrastructure Terraform -->
                 <div class="project-card reveal">
                     <div class="project-image">
-                        <div class="project-bg"><i class="fas fa-dharmachakra"></i></div>
+                        <div class="project-bg"><i class="fab fa-aws"></i></div>
                         <span class="project-status status-live">Live</span>
                     </div>
+        
                     <div class="project-content">
-                        <h3 class="project-title">Kubernetes Multi-Cluster Platform</h3>
+                        <h3 class="project-title">AWS Infrastructure Terraform</h3>
+        
                         <p class="project-desc">
-                            Built a multi-cluster Kubernetes platform with automated provisioning, 
-                            service mesh, GitOps deployments, and comprehensive observability stack.
+                            Built modular AWS infrastructure using Terraform to provision VPC, EC2, and security resources with automated CI/CD deployments via GitHub Actions across dev, staging, and production environments.
                         </p>
+        
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">Infrastructure as Code</span>
+                        </div>
+        
+                        <div class="project-links">
+                            <a href="https://github.com/prasanth624/AWS-Infrastructure-Terraform" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+        
+                            <a href="https://github.com/prasanth624/AWS-Infrastructure-Terraform" class="project-link" target="_blank">
+                                <i class="fas fa-book"></i> Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Azure Infrastructure Terraform -->
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-bg"><i class="fab fa-microsoft"></i></div>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+        
+                    <div class="project-content">
+                        <h3 class="project-title">Azure Infrastructure Terraform</h3>
+        
+                        <p class="project-desc">
+                            Built modular Azure infrastructure using Terraform for networking, compute, and storage with automated CI/CD deployments using GitHub Actions across dev and production environments.
+                        </p>
+        
+                        <div class="project-tech">
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Infrastructure as Code</span>
+                            <span class="tech-tag">Cloud</span>
+                            <span class="tech-tag">DevOps</span>
+                        </div>
+        
+                        <div class="project-links">
+                            <a href="https://github.com/prasanth624/Azure-Infrastructure-Terraform" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+        
+                            <a href="https://github.com/prasanth624/Azure-Infrastructure-Terraform" class="project-link" target="_blank">
+                                <i class="fas fa-book"></i> Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kubernetes Blue-Green Deployment -->
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-bg k8s">
+                            <i class="fas fa-dharmachakra"></i>
+                        </div>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+                
+                    <div class="project-content">
+                        <h3 class="project-title">Kubernetes Blue-Green Deployment</h3>
+                
+                        <p class="project-desc">
+                            Implemented zero-downtime application deployments in Kubernetes using 
+                            Blue-Green deployment strategy with service-based traffic switching 
+                            to ensure safe releases and quick rollback capability.
+                        </p>
+                
                         <div class="project-tech">
                             <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">ArgoCD</span>
-                            <span class="tech-tag">Istio</span>
-                            <span class="tech-tag">Prometheus</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card reveal">
-                    <div class="project-image">
-                        <div class="project-bg"><i class="fas fa-infinity"></i></div>
-                        <span class="project-status status-live">Live</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Enterprise CI/CD Pipeline Framework</h3>
-                        <p class="project-desc">
-                            Designed a reusable CI/CD framework with multi-stage pipelines, automated 
-                            testing, security scanning, and blue-green deployments across environments.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Jenkins</span>
-                            <span class="tech-tag">GitHub Actions</span>
                             <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">SonarQube</span>
-                            <span class="tech-tag">Trivy</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">DevOps</span>
+                            <span class="tech-tag">Blue-Green Deployment</span>
                         </div>
+                
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-book"></i> Documentation</a>
+                            <a href="https://github.com/prasanth624/Kubernetes-blue-green-deployment" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                
+                            <a href="https://github.com/prasanth624/Kubernetes-blue-green-deployment" class="project-link" target="_blank">
+                                <i class="fas fa-book"></i> Documentation
+                            </a>
                         </div>
                     </div>
                 </div>
-
+                <!-- Cloud Cost Optimization -->
                 <div class="project-card reveal">
                     <div class="project-image">
-                        <div class="project-bg"><i class="fas fa-mountain"></i></div>
+                        <div class="project-bg cost">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
                         <span class="project-status status-live">Live</span>
                     </div>
+                
                     <div class="project-content">
-                        <h3 class="project-title">Infrastructure as Code Library</h3>
+                        <h3 class="project-title">Cloud Cost Optimization</h3>
+                
                         <p class="project-desc">
-                            Comprehensive Terraform module library for AWS infrastructure including 
-                            VPC, EKS, RDS, ElastiCache, and IAM with best practices and compliance.
+                            Implemented cloud cost optimization strategies to identify unused resources,
+                            right-size infrastructure, and reduce cloud spending across workloads while
+                            maintaining performance and efficiency.
                         </p>
+                
                         <div class="project-tech">
-                            <span class="tech-tag">Terraform</span>
                             <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Terratest</span>
-                            <span class="tech-tag">tfsec</span>
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">FinOps</span>
+                            <span class="tech-tag">Cloud Optimization</span>
+                            <span class="tech-tag">Cost Management</span>
                         </div>
+                
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Registry</a>
+                            <a href="https://github.com/prasanth624/Cost-optimization-in-Cloud" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                
+                            <a href="https://github.com/prasanth624/Cost-optimization-in-Cloud" class="project-link" target="_blank">
+                                <i class="fas fa-book"></i> Documentation
+                            </a>
                         </div>
                     </div>
                 </div>
-
+        
+                <!-- ArgoCD App-of-Apps GitOps Deployment -->
                 <div class="project-card reveal">
                     <div class="project-image">
-                        <div class="project-bg"><i class="fas fa-chart-line"></i></div>
-                        <span class="project-status status-progress">In Progress</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Cloud-Native Observability Platform</h3>
-                        <p class="project-desc">
-                            End-to-end observability platform with metrics, logs, and traces using 
-                            OpenTelemetry, Prometheus, Grafana, Loki, and Tempo for microservices.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Prometheus</span>
-                            <span class="tech-tag">Grafana</span>
-                            <span class="tech-tag">Loki</span>
-                            <span class="tech-tag">Tempo</span>
-                            <span class="tech-tag">OpenTelemetry</span>
+                        <div class="project-bg argocd">
+                            <i class="fas fa-code-branch"></i>
                         </div>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+                
+                    <div class="project-content">
+                        <h3 class="project-title">ArgoCD App-of-Apps GitOps Deployment</h3>
+                
+                        <p class="project-desc">
+                            Implemented GitOps-based Kubernetes deployments using ArgoCD App-of-Apps 
+                            pattern to manage multiple applications from a single parent configuration 
+                            with automated synchronization and version-controlled infrastructure.
+                        </p>
+                
+                        <div class="project-tech">
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">ArgoCD</span>
+                            <span class="tech-tag">GitOps</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-blog"></i> Blog Post</a>
+                            <a href="https://github.com/prasanth624/ArgoCD-app-of-apps" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                
+                            <a href="https://github.com/prasanth624/ArgoCD-app-of-apps" class="project-link" target="_blank">
+                                <i class="fas fa-book"></i> Documentation
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -2327,34 +2560,56 @@
                     </p>
 
                     <div class="contact-methods">
-                        <a href="mailto:prasanthb@devops.com" class="contact-method">
-                            <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
+
+                        <!-- Email -->
+                        <a 
+                            href="mailto:prasanthb@devops.com"
+                            class="contact-method"
+                            aria-label="Send email to Prasanth B"
+                        >
+                            <div class="contact-method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
                             <div>
                                 <div class="contact-method-label">Email</div>
                                 <div class="contact-method-value">prasanthb@devops.com</div>
                             </div>
                         </a>
-                        <a href="tel:+919876543210" class="contact-method">
-                            <div class="contact-method-icon"><i class="fas fa-phone"></i></div>
-                            <div>
-                                <div class="contact-method-label">Phone</div>
-                                <div class="contact-method-value">+91 98765 43210</div>
+                    
+                        <!-- LinkedIn -->
+                        <a 
+                            href="https://www.linkedin.com/in/prasanth-ai"
+                            class="contact-method"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Prasanth B LinkedIn profile"
+                        >
+                            <div class="contact-method-icon">
+                                <i class="fab fa-linkedin-in"></i>
                             </div>
-                        </a>
-                        <a href="#" class="contact-method">
-                            <div class="contact-method-icon"><i class="fab fa-linkedin-in"></i></div>
                             <div>
                                 <div class="contact-method-label">LinkedIn</div>
                                 <div class="contact-method-value">linkedin.com/in/prasanthb</div>
                             </div>
                         </a>
-                        <a href="#" class="contact-method">
-                            <div class="contact-method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    
+                        <!-- Location -->
+                        <a 
+                            href="https://www.google.com/maps/place/India"
+                            class="contact-method"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Location: India"
+                        >
+                            <div class="contact-method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
                             <div>
                                 <div class="contact-method-label">Location</div>
                                 <div class="contact-method-value">India</div>
                             </div>
                         </a>
+                    
                     </div>
                 </div>
 
@@ -2394,16 +2649,49 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
+    
+            <!-- Brand -->
             <div class="footer-brand">
-                <h4>&lt;Prasanth B /&gt;</h4>
-                <p>Cloud DevOps Engineer passionate about building scalable infrastructure and automating everything.</p>
+                <h4>&lt;Prasanth Bala /&gt;</h4>
+                <p>
+                    Cloud DevOps Engineer passionate about building scalable infrastructure 
+                    and automating everything.
+                </p>
+    
                 <div class="footer-social">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+                    <a 
+                        href="https://github.com/prasanth624"
+                        class="social-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub profile"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+    
+                    <a 
+                        href="https://www.linkedin.com/in/prasanth-ai"
+                        class="social-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn profile"
+                    >
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+    
+                    <a 
+                        href="https://medium.com/@bprasanth3456"
+                        class="social-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Medium profile"
+                    >
+                        <i class="fab fa-medium"></i>
+                    </a>
                 </div>
             </div>
+    
+            <!-- Quick Links -->
             <div>
                 <h4 class="footer-title">Quick Links</h4>
                 <ul class="footer-links">
@@ -2413,6 +2701,8 @@
                     <li><a href="#projects">Projects</a></li>
                 </ul>
             </div>
+    
+            <!-- Services -->
             <div>
                 <h4 class="footer-title">Services</h4>
                 <ul class="footer-links">
@@ -2422,21 +2712,26 @@
                     <li><a href="#services">DevSecOps</a></li>
                 </ul>
             </div>
+    
+            <!-- Resources -->
             <div>
                 <h4 class="footer-title">Resources</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Open Source</a></li>
-                    <li><a href="#">Resume</a></li>
+                    <li><a href="https://medium.com/@bprasanth3456" target="_blank">Blog</a></li>
+                    <li><a href="https://github.com/prasanth624" target="_blank">Open Source</a></li>
+                    <li><a href="/resume.pdf" target="_blank">Resume</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+    
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2025 Prasanth B. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> Prasanth Bala. All rights reserved.</p>
             <p>Built with ❤️ and DevOps mindset</p>
         </div>
     </footer>
+
 
     <!-- Back to Top -->
     <a href="#home" class="back-to-top" id="backToTop">
@@ -2712,6 +3007,9 @@
                 }
             });
         });
+    </script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
