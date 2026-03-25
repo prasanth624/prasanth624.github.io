@@ -12,7 +12,6 @@ light blue
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            /* === SKY BLUE — FRESH THEME 2025 === */
             --primary: #0284c7;
             --primary-light: #0ea5e9;
             --secondary: #38bdf8;
@@ -48,12 +47,10 @@ light blue
             line-height: 1.7;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--darker); }
         ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
 
-        /* Animated Background */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -101,7 +98,6 @@ light blue
             75% { transform: translate(50px, 50px) scale(1.05); }
         }
 
-        /* Particle Canvas */
         #particles-canvas {
             position: fixed;
             top: 0;
@@ -173,9 +169,7 @@ light blue
             padding: 0.5rem 0;
         }
 
-        .nav-links a:hover {
-            color: var(--text);
-        }
+        .nav-links a:hover { color: var(--text); }
 
         .nav-links a::after {
             content: '';
@@ -280,9 +274,7 @@ light blue
         }
 
         @media (max-width: 1024px) {
-            .hero-content {
-                padding-left: 0;
-            }
+            .hero-content { padding-left: 0; }
         }
 
         .hero-stats {
@@ -328,9 +320,7 @@ light blue
             animation: fadeInUp 0.8s ease 0.5s both;
         }
 
-        .stat-item {
-            text-align: center;
-        }
+        .stat-item { text-align: center; }
 
         .stat-number {
             font-size: 2rem;
@@ -435,122 +425,27 @@ light blue
 
         .hero-image-wrapper {
             position: relative;
-            width: 400px;
-            height: 400px;
+            width: 450px;
+            height: 450px;
         }
 
-        .hero-avatar {
-            width: 300px;
-            height: 300px;
-            border-radius: 30px;
-            background: var(--gradient-1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* ===== TERMINAL IN ORBIT CENTER ===== */
+        .terminal-card {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 2;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(2, 132, 199, 0.25);
-            font-size: 35px;
-            font-weight: 700;
-            color: white;
-            letter-spacing: 2px;
-            text-align: center;
-        }
-
-        .hero-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 24px;
-            background: #dbeafe;
-        }
-
-        .orbit-ring {
-            position: absolute;
-            border: 1px dashed rgba(2, 132, 199, 0.2);
-            border-radius: 50%;
-            animation: spin 20s linear infinite;
-        }
-
-        .orbit-ring-1 {
-            width: 350px; height: 350px;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .orbit-ring-2 {
-            width: 420px; height: 420px;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            animation-direction: reverse;
-            animation-duration: 30s;
-        }
-
-        @keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
-        
-        /* Floating Icons - Improved positioning */
-        .hero-image-wrapper > .floating-icon {
-            position: absolute;
-            width: 52px;
-            height: 52px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.45rem;
-            background: white;
-            border: 1px solid rgba(2, 132, 199, 0.15);
-            box-shadow: 0 4px 18px rgba(2, 132, 199, 0.15);
-            animation: floatIcon 6s ease-in-out infinite;
-            z-index: 3;
-            color: #1a3a5c;
-        }
-        
-        /* Individual positioning */
-        .hero-image-wrapper > .floating-icon:nth-of-type(1) { top: 8%; right: 12%; animation-delay: 0s; }     /* AWS */
-        .hero-image-wrapper > .floating-icon:nth-of-type(2) { top: 22%; right: -8%; animation-delay: -1.2s; } /* Azure */
-        .hero-image-wrapper > .floating-icon:nth-of-type(3) { top: 48%; right: -10%; animation-delay: -2.8s; } /* GCP */
-        .hero-image-wrapper > .floating-icon:nth-of-type(4) { bottom: 22%; right: -6%; animation-delay: -4s; } /* Kubernetes */
-        .hero-image-wrapper > .floating-icon:nth-of-type(5) { bottom: 10%; right: 15%; animation-delay: -0.8s; } /* Git */
-        .hero-image-wrapper > .floating-icon:nth-of-type(6) { top: 58%; left: 12%; animation-delay: -3.5s; }   /* Docker */
-        .hero-image-wrapper > .floating-icon:nth-of-type(7) { top: 15%; left: -5%; animation-delay: -2.2s; }   /* Azure */
-        .hero-image-wrapper > .floating-icon:nth-of-type(8) { bottom: 38%; left: -8%; animation-delay: -5s; }  /* Infinity */
-        
-        /* Icon-specific colors */
-        .hero-image-wrapper > .floating-icon:nth-of-type(1) { color: #ff9900; } /* AWS */
-        .hero-image-wrapper > .floating-icon:nth-of-type(2) { color: #0078d4; } /* Microsoft */
-        .hero-image-wrapper > .floating-icon:nth-of-type(3) { color: #4285f4; } /* Google */
-        .hero-image-wrapper > .floating-icon:nth-of-type(4) { color: #326ce5; } /* Kubernetes */
-        .hero-image-wrapper > .floating-icon:nth-of-type(5) { color: #f05033; } /* Git */
-        .hero-image-wrapper > .floating-icon:nth-of-type(6) { color: #2496ed; } /* Docker */
-        .hero-image-wrapper > .floating-icon:nth-of-type(7) { color: #0078d4; } /* Azure */
-        .hero-image-wrapper > .floating-icon:nth-of-type(8) { color: #10b981; } /* Infinity */
-
-        @keyframes floatIcon {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-18px) rotate(8deg); }
-        }
-
-        /* Terminal Card */
-        .terminal-card {
-            position: absolute;
-            bottom: -30px;
-            left: -40px;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(20px);
             border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 1rem;
-            min-width: 280px;
+            border-radius: 16px;
+            padding: 1.3rem 1.5rem;
+            width: 300px; /* fixed */
             z-index: 4;
-            animation: fadeInUp 1s ease 1s both;
-            box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);
+            animation: fadeIn 1s ease 1s both;
+            box-shadow: 0 10px 40px rgba(2, 132, 199, 0.12), 0 0 0 1px rgba(2, 132, 199, 0.05);
         }
-
+        
         .terminal-header {
             display: flex;
             gap: 6px;
@@ -569,8 +464,9 @@ light blue
 
         .terminal-body {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             line-height: 1.8;
+            min-height: 120px;
         }
 
         .terminal-line { color: var(--text-muted); }
@@ -580,8 +476,8 @@ light blue
 
         .typing-cursor {
             display: inline-block;
-            width: 8px;
-            height: 14px;
+            width: 7px;
+            height: 13px;
             background: var(--primary);
             margin-left: 2px;
             animation: blink 1s infinite;
@@ -591,6 +487,70 @@ light blue
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
+        }
+
+        .orbit-ring {
+            position: absolute;
+            border: 1px dashed rgba(2, 132, 199, 0.2);
+            border-radius: 50%;
+            animation: spin 20s linear infinite;
+        }
+
+        .orbit-ring-1 {
+            width: 370px; height: 370px;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit-ring-2 {
+            width: 450px; height: 450px;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            animation-direction: reverse;
+            animation-duration: 30s;
+        }
+
+        @keyframes spin { 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+
+        /* Floating Icons */
+        .hero-image-wrapper > .floating-icon {
+            position: absolute;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.45rem;
+            background: white;
+            border: 1px solid rgba(2, 132, 199, 0.15);
+            box-shadow: 0 4px 18px rgba(2, 132, 199, 0.15);
+            animation: floatIcon 6s ease-in-out infinite;
+            z-index: 5;
+            color: #1a3a5c;
+        }
+
+        .hero-image-wrapper > .floating-icon:nth-of-type(1) { top: 2%; right: 18%; animation-delay: 0s; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(2) { top: 18%; right: -4%; animation-delay: -1.2s; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(3) { top: 45%; right: -8%; animation-delay: -2.8s; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(4) { bottom: 18%; right: -2%; animation-delay: -4s; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(5) { bottom: 2%; right: 20%; animation-delay: -0.8s; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(6) { bottom: 2%; left: 20%; animation-delay: -3.5s; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(7) { top: 2%; left: 18%; animation-delay: -2.2s; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(8) { top: 45%; left: -8%; animation-delay: -5s; }
+
+        .hero-image-wrapper > .floating-icon:nth-of-type(1) { color: #ff9900; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(2) { color: #0078d4; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(3) { color: #4285f4; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(4) { color: #326ce5; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(5) { color: #f05033; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(6) { color: #2496ed; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(7) { color: #0078d4; }
+        .hero-image-wrapper > .floating-icon:nth-of-type(8) { color: #10b981; }
+
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-18px) rotate(8deg); }
         }
 
         /* Section Styles */
@@ -703,9 +663,7 @@ light blue
             color: var(--text);
         }
 
-        .about-image {
-            position: relative;
-        }
+        .about-image { position: relative; }
 
         .about-card {
             background: #ffffff;
@@ -795,7 +753,6 @@ light blue
             height: 3px;
         }
 
-        /* Top Gradient Borders */
         .skill-category:nth-child(1)::before { background: linear-gradient(135deg,#0284c7,#38bdf8); }
         .skill-category:nth-child(2)::before { background: linear-gradient(135deg,#10b981,#14b8a6); }
         .skill-category:nth-child(3)::before { background: linear-gradient(135deg,#f59e0b,#ef4444); }
@@ -805,34 +762,31 @@ light blue
         .skill-category:nth-child(7)::before { background: linear-gradient(135deg,#6366f1,#a855f7); }
         .skill-category:nth-child(8)::before { background: linear-gradient(135deg,#22c55e,#84cc16); }
 
-        /* Header Layout */
         .category-header {
-            display:flex;
-            align-items:center;
-            gap:1rem;
-            margin-bottom:1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        /* Icon Style */
-        .category-icon{
-            width:50px;
-            height:50px;
-            border-radius:12px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-size:1.3rem;
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
         }
 
-        /* Icon Colors */
-        .skill-category:nth-child(1) .category-icon { background:rgba(2,132,199,0.1); color:#0284c7; }
-        .skill-category:nth-child(2) .category-icon { background:rgba(16,185,129,0.1); color:#10b981; }
-        .skill-category:nth-child(3) .category-icon { background:rgba(245,158,11,0.1); color:#f59e0b; }
-        .skill-category:nth-child(4) .category-icon { background:rgba(139,92,246,0.1); color:#8b5cf6; }
-        .skill-category:nth-child(5) .category-icon { background:rgba(6,182,212,0.1); color:#06b6d4; }
-        .skill-category:nth-child(6) .category-icon { background:rgba(244,63,94,0.1); color:#f43f5e; }
-        .skill-category:nth-child(7) .category-icon { background:rgba(168,85,247,0.1); color:#a855f7; }
-        .skill-category:nth-child(8) .category-icon { background:rgba(34,197,94,0.1); color:#22c55e; }
+        .skill-category:nth-child(1) .category-icon { background: rgba(2,132,199,0.1); color: #0284c7; }
+        .skill-category:nth-child(2) .category-icon { background: rgba(16,185,129,0.1); color: #10b981; }
+        .skill-category:nth-child(3) .category-icon { background: rgba(245,158,11,0.1); color: #f59e0b; }
+        .skill-category:nth-child(4) .category-icon { background: rgba(139,92,246,0.1); color: #8b5cf6; }
+        .skill-category:nth-child(5) .category-icon { background: rgba(6,182,212,0.1); color: #06b6d4; }
+        .skill-category:nth-child(6) .category-icon { background: rgba(244,63,94,0.1); color: #f43f5e; }
+        .skill-category:nth-child(7) .category-icon { background: rgba(168,85,247,0.1); color: #a855f7; }
+        .skill-category:nth-child(8) .category-icon { background: rgba(34,197,94,0.1); color: #22c55e; }
 
         .category-title {
             font-size: 1.2rem;
@@ -1101,7 +1055,7 @@ light blue
         .project-card:nth-child(2) .project-bg { background: linear-gradient(135deg, #164e63, #0891b2); }
         .project-card:nth-child(3) .project-bg { background: linear-gradient(135deg, #1e3a5f, #3b82f6); }
         .project-card:nth-child(4) .project-bg { background: linear-gradient(135deg, #134e4a, #0d9488); }
-        .project-card:nth-child(5) .project-bg { background: linear-gradient(135deg, #4c1d95, #a855f7); } 
+        .project-card:nth-child(5) .project-bg { background: linear-gradient(135deg, #4c1d95, #a855f7); }
 
         .project-status {
             position: absolute;
@@ -1126,9 +1080,7 @@ light blue
             border: 1px solid rgba(245, 158, 11, 0.3);
         }
 
-        .project-content {
-            padding: 1.5rem;
-        }
+        .project-content { padding: 1.5rem; }
 
         .project-title {
             font-size: 1.2rem;
@@ -1175,9 +1127,7 @@ light blue
             transition: color 0.3s ease;
         }
 
-        .project-link:hover {
-            color: var(--primary);
-        }
+        .project-link:hover { color: var(--primary); }
 
         /* Certifications Section */
         .certs-grid {
@@ -1217,9 +1167,6 @@ light blue
         .cert-card:nth-child(1) .cert-icon { background: rgba(255, 153, 0, 0.1); color: #ff9900; }
         .cert-card:nth-child(2) .cert-icon { background: rgba(0, 123, 255, 0.1); color: #007bff; }
         .cert-card:nth-child(3) .cert-icon { background: rgba(50, 120, 200, 0.1); color: #3278c8; }
-        .cert-card:nth-child(4) .cert-icon { background: rgba(209, 61, 16, 0.1); color: #d13d10; }
-        .cert-card:nth-child(5) .cert-icon { background: rgba(2, 132, 199, 0.1); color: #0284c7; }
-        .cert-card:nth-child(6) .cert-icon { background: rgba(6, 182, 212, 0.1); color: #06b6d4; }
 
         .cert-info { flex: 1; }
 
@@ -1375,7 +1322,6 @@ light blue
         .contact-method:nth-child(1) .contact-method-icon { background: rgba(2, 132, 199, 0.1); color: var(--primary); }
         .contact-method:nth-child(2) .contact-method-icon { background: rgba(16, 185, 129, 0.1); color: #10b981; }
         .contact-method:nth-child(3) .contact-method-icon { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
-        .contact-method:nth-child(4) .contact-method-icon { background: rgba(244, 63, 94, 0.1); color: #f43f5e; }
 
         .contact-method-label {
             font-size: 0.75rem;
@@ -1398,9 +1344,7 @@ light blue
             box-shadow: 0 4px 20px rgba(2, 132, 199, 0.06);
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
+        .form-group { margin-bottom: 1.5rem; }
 
         .form-label {
             display: block;
@@ -1575,9 +1519,7 @@ light blue
             transform: translateY(0);
         }
 
-        .counter {
-            display: inline;
-        }
+        .counter { display: inline; }
 
         /* Responsive Design */
         @media (max-width: 1024px) {
@@ -1585,24 +1527,30 @@ light blue
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+        
             .hero-description { margin: 0 auto 2rem; }
             .hero-stats { justify-content: center; }
             .hero-buttons { justify-content: center; }
             .hero-social { justify-content: center; }
             .hero-visual { order: -1; }
-            .hero-image-wrapper { width: 300px; height: 300px; }
-            .hero-avatar { width: 220px; height: 220px; }
-            .orbit-ring-1 { width: 270px; height: 270px; }
-            .orbit-ring-2 { width: 320px; height: 320px; }
-            .terminal-card { display: none; }
+        
+            .hero-image-wrapper { width: 420px; height: 420px; }
+        
+            /* KEEP SAME SIZE */
+            .terminal-card { width: 300px; padding: 1.3rem 1.5rem; }
+            .terminal-body { font-size: 0.8rem; min-height: 120px; }
+        
+            .orbit-ring-1 { width: 340px; height: 340px; }
+            .orbit-ring-2 { width: 420px; height: 420px; }
+        
             .about-grid { grid-template-columns: 1fr; }
             .contact-grid { grid-template-columns: 1fr; }
             .footer-container { grid-template-columns: 1fr 1fr; }
         }
-
+        
         @media (max-width: 768px) {
             .hamburger { display: flex; }
-
+        
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -1617,31 +1565,75 @@ light blue
                 transition: right 0.3s ease;
                 border-left: 1px solid var(--card-border);
             }
-
+        
             .nav-links.active { right: 0; }
-
+        
             .hero-title { font-size: 2.5rem; }
             .hero-title .role { font-size: 1.2rem; }
             .section-title { font-size: 2rem; }
-            .skills-categories { grid-template-columns: 1fr; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .certs-grid { grid-template-columns: 1fr; }
+        
+            .skills-categories,
+            .projects-grid,
+            .certs-grid,
             .services-grid { grid-template-columns: 1fr; }
+        
             .form-row { grid-template-columns: 1fr; }
             .footer-container { grid-template-columns: 1fr; }
-            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+        
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        
             .about-highlights { grid-template-columns: 1fr; }
+        
             .timeline::before { left: 20px; }
             .timeline-item { padding-left: 60px; }
             .timeline-dot { left: 11px; }
-            .floating-icon { width: 40px; height: 40px; font-size: 1rem; }
+        
+            .hero-image-wrapper { width: 360px; height: 360px; }
+        
+            /* KEEP SAME SIZE */
+            .terminal-card { width: 300px; padding: 1.3rem 1.5rem; }
+            .terminal-body { font-size: 0.8rem; min-height: 120px; }
+        
+            .orbit-ring-1 { width: 300px; height: 300px; }
+            .orbit-ring-2 { width: 360px; height: 360px; }
+        
+            .floating-icon {
+                width: 40px !important;
+                height: 40px !important;
+                font-size: 1rem !important;
+            }
         }
-
+        
         @media (max-width: 480px) {
             .hero-title { font-size: 2rem; }
-            .hero-stats { flex-direction: column; gap: 1rem; }
+        
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        
             .hero-buttons { flex-direction: column; }
             .btn { width: 100%; justify-content: center; }
+        
+            .hero-image-wrapper { width: 320px; height: 320px; }
+        
+            /* STILL SAME SIZE */
+            .terminal-card { width: 300px; padding: 1.2rem; }
+            .terminal-body { font-size: 0.75rem; min-height: 110px; }
+        
+            .orbit-ring-1 { width: 260px; height: 260px; }
+            .orbit-ring-2 { width: 320px; height: 320px; }
+        
+            .floating-icon {
+                width: 34px !important;
+                height: 34px !important;
+                font-size: 0.85rem !important;
+                border-radius: 10px !important;
+            }
         }
     </style>
 </head>
@@ -1723,79 +1715,46 @@ light blue
                     </a>
                 </div>
                 <div class="hero-social">
-                    <a 
-                        href="https://github.com/prasanth624"
-                        class="social-link"
-                        title="GitHub"
-                        aria-label="GitHub profile"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a href="https://github.com/prasanth624" class="social-link" title="GitHub" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-github"></i>
                     </a>
-                
-                    <a 
-                        href="https://www.linkedin.com/in/prasanth-bala-devops"
-                        class="social-link"
-                        title="LinkedIn"
-                        aria-label="Linkedin profile"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a href="https://www.linkedin.com/in/prasanth-bala-devops" class="social-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                
-                    <a 
-                        href="https://medium.com/@bprasanth3456"
-                        class="social-link"
-                        title="Medium"
-                        aria-label="Medium profile"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    <a href="https://medium.com/@bprasanth3456" class="social-link" title="Medium" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-medium"></i>
                     </a>
                 </div>
             </div>
+
+            <!-- ===== HERO VISUAL — TERMINAL INSIDE ORBIT ===== -->
             <div class="hero-visual">
-                 <div class="hero-image-wrapper">
-                <div class="orbit-ring orbit-ring-1"></div>
-                <div class="orbit-ring orbit-ring-2"></div>
-                
-                <!-- Floating Tech Icons - Properly positioned -->
-                <div class="floating-icon"><i class="fab fa-aws"></i></div>
-                <div class="floating-icon"><i class="fab fa-microsoft"></i></div>
-                <div class="floating-icon"><i class="fab fa-google"></i></div>
-                <div class="floating-icon"><i class="fas fa-dharmachakra"></i></div>
-                <div class="floating-icon"><i class="fab fa-git-alt"></i></div>
-                <div class="floating-icon"><i class="fab fa-docker"></i></div>
-                <div class="floating-icon"><i class="fab fa-azure"></i></div>
-                <div class="floating-icon"><i class="fas fa-infinity"></i></div>
-            </div>
-                <div class="terminal-card">
-                    <div class="terminal-header">
-                        <div class="terminal-dot"></div>
-                        <div class="terminal-dot"></div>
-                        <div class="terminal-dot"></div>
-                    </div>
-                    <div class="terminal-body">
-                        <div class="terminal-line">
-                            <span class="prompt">prasanth@cloud:~$ </span>
-                            <span class="command">kubectl get pods</span>
+                <div class="hero-image-wrapper">
+                    <div class="orbit-ring orbit-ring-1"></div>
+                    <div class="orbit-ring orbit-ring-2"></div>
+
+                    <!-- Floating Tech Icons -->
+                    <div class="floating-icon"><i class="fab fa-aws"></i></div>
+                    <div class="floating-icon"><i class="fab fa-microsoft"></i></div>
+                    <div class="floating-icon"><i class="fab fa-google"></i></div>
+                    <div class="floating-icon"><i class="fas fa-dharmachakra"></i></div>
+                    <div class="floating-icon"><i class="fab fa-git-alt"></i></div>
+                    <div class="floating-icon"><i class="fab fa-docker"></i></div>
+                    <div class="floating-icon"><i class="fab fa-linux"></i></div>
+                    <div class="floating-icon"><i class="fas fa-infinity"></i></div>
+
+                    <!-- Terminal Card — centered in orbit -->
+                    <div class="terminal-card">
+                        <div class="terminal-header">
+                            <div class="terminal-dot"></div>
+                            <div class="terminal-dot"></div>
+                            <div class="terminal-dot"></div>
                         </div>
-                        <div class="terminal-line">
-                            <span class="output">All pods running ✓</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="prompt">prasanth@cloud:~$ </span>
-                            <span class="command">terraform apply</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="output">Infrastructure deployed! 🚀</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="prompt">prasanth@cloud:~$ </span>
-                            <span class="typing-cursor"></span>
+                        <div class="terminal-body" id="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">prasanth@cloud:~$ </span>
+                                <span class="typing-cursor"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1913,7 +1872,6 @@ light blue
             </div>
 
             <div class="skills-categories">
-                <!-- Cloud Platforms -->
                 <div class="skill-category reveal">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-cloud"></i></div>
@@ -1934,7 +1892,6 @@ light blue
                     </div>
                 </div>
 
-                <!-- IaC & Configuration -->
                 <div class="skill-category reveal">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-file-code"></i></div>
@@ -1954,7 +1911,6 @@ light blue
                     </div>
                 </div>
 
-                <!-- Container & Orchestration -->
                 <div class="skill-category reveal">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-cubes"></i></div>
@@ -1975,7 +1931,6 @@ light blue
                     </div>
                 </div>
 
-                <!-- CI/CD -->
                 <div class="skill-category reveal">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-infinity"></i></div>
@@ -1993,7 +1948,6 @@ light blue
                     </div>
                 </div>
 
-                <!-- Monitoring & Observability -->
                 <div class="skill-category reveal">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-chart-line"></i></div>
@@ -2011,8 +1965,7 @@ light blue
                         <span class="skill-tag"><i class="fas fa-eye"></i> New Relic</span>
                     </div>
                 </div>
-                
-                <!-- Security & DevSecOps -->
+
                 <div class="skill-category reveal">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-shield-halved"></i></div>
@@ -2031,8 +1984,7 @@ light blue
                         <span class="skill-tag"><i class="fas fa-network-wired"></i> Zero Trust</span>
                     </div>
                 </div>
-                
-                <!-- AI/ML -->
+
                 <div class="skill-category reveal">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-brain"></i></div>
@@ -2051,8 +2003,7 @@ light blue
                         <span class="skill-tag"><i class="fas fa-network-wired"></i> MLOps</span>
                     </div>
                 </div>
-                
-                <!-- Scripting & Tools -->
+
                 <div class="skill-category reveal">
                     <div class="category-header">
                         <div class="category-icon"><i class="fas fa-terminal"></i></div>
@@ -2075,7 +2026,6 @@ light blue
                 </div>
             </div>
 
-            <!-- Tools Marquee -->
             <div class="tools-marquee reveal">
                 <div class="marquee-track">
                     <div class="marquee-item"><i class="fab fa-aws" style="color:#ff9900;"></i> AWS</div>
@@ -2092,7 +2042,6 @@ light blue
                     <div class="marquee-item"><i class="fab fa-linux" style="color:#333;"></i> Linux</div>
                     <div class="marquee-item"><i class="fas fa-ship" style="color:#0f1689;"></i> Helm</div>
                     <div class="marquee-item"><i class="fas fa-lock" style="color:#d4930d;"></i> Vault</div>
-                    <!-- Duplicate for seamless loop -->
                     <div class="marquee-item"><i class="fab fa-aws" style="color:#ff9900;"></i> AWS</div>
                     <div class="marquee-item"><i class="fab fa-docker" style="color:#2496ed;"></i> Docker</div>
                     <div class="marquee-item"><i class="fas fa-dharmachakra" style="color:#326ce5;"></i> Kubernetes</div>
@@ -2129,33 +2078,20 @@ light blue
                         <h3 class="timeline-role">DevOps Engineer</h3>
                         <p class="timeline-company">Cerebrone.ai</p>
                         <div class="timeline-desc">
-                          <ul>
+                            <ul>
                                 <li>Designed, deployed, and managed secure and scalable infrastructure on AWS using Terraform, CloudFormation, and Terragrunt including compute, network, and storage resources.</li>
-                        
                                 <li>Provisioned and managed cloud resources including GPU/TPU instances, Kubernetes, serverless computing, and AWS AI/ML services to optimize ML workloads and enable real-time image and video analysis.</li>
-                        
                                 <li>Troubleshot and resolved complex infrastructure and application issues, maintaining system stability, improving performance, and minimizing downtime for AI/ML operations.</li>
-                        
                                 <li>Automated infrastructure and application deployments using GitHub Actions for CI/CD ensuring consistency and efficiency.</li>
-                        
                                 <li>Implemented autoscaling with KEDA and managed GitOps deployments using ArgoCD, improving responsiveness and reducing cloud costs.</li>
-                        
                                 <li>Used Karpenter for efficient EC2 provisioning and integrated Istio service mesh to enhance traffic management and security.</li>
-                        
                                 <li>Automated repetitive tasks using Python, Bash, and PowerShell scripts to improve efficiency, reduce errors, and maintain workflow consistency.</li>
-                        
                                 <li>Developed and maintained serverless applications using AWS Lambda and API Gateway, reducing infrastructure costs and improving scalability.</li>
-                        
                                 <li>Implemented cost optimization strategies and performed billing audits, reducing cloud expenses by 40% through efficient resource utilization.</li>
-                        
                                 <li>Integrated Snyk into CI/CD pipelines across Dev, QA, and Production environments enabling automated vulnerability scanning for dependencies and container images.</li>
-                        
                                 <li>Designed and maintained Grafana and Langfuse dashboards with proactive alerting to monitor AI/ML model performance and system anomalies.</li>
-                        
                                 <li>Developed and implemented a resilient disaster recovery and high availability strategy ensuring minimal downtime for AI/ML applications.</li>
-                        
                                 <li>Automated configuration management and application deployments using Ansible playbooks ensuring consistency across multiple environments.</li>
-                        
                                 <li>Documented infrastructure and application solutions in Confluence enabling knowledge sharing and collaboration across engineering teams.</li>
                             </ul>
                         </div>
@@ -2178,23 +2114,14 @@ light blue
                         <div class="timeline-desc">
                             <ul>
                                 <li>Configured and managed Azure Repos with branching strategies, code reviews, and pull requests to ensure smooth collaboration and maintain code quality.</li>
-                                
                                 <li>Developed and optimized CI/CD pipelines in Azure Pipelines, automating build, test, and deployment workflows for faster and more reliable releases.</li>
-                                
                                 <li>Deployed and managed containerized applications on Kubernetes clusters using Helm charts, custom manifests, and automation scripts.</li>
-                                
                                 <li>Configured and administered Kubernetes resources such as Deployments, Services, Ingress, and ConfigMaps to ensure scalable, secure, and resilient workloads.</li>
-                                
                                 <li>Configured and managed Azure Blob Storage for storing unstructured data, application logs, and backups with lifecycle policies, encryption, and secure access controls.</li>
-                                
                                 <li>Deployed and configured Nginx Ingress Controller on Azure Kubernetes Service (AKS) to securely expose microservices with path-based and host-based routing for external traffic.</li>
-                                
                                 <li>Integrated Snyk into CI/CD pipelines to automatically identify and remediate security vulnerabilities in application dependencies and container images.</li>
-                                
                                 <li>Deployed and maintained Azure SQL Database for structured data storage, implementing backup strategies and security measures to ensure high availability.</li>
-                                
                                 <li>Worked with Azure Boards for sprint planning, backlog management, and tracking work items to support agile delivery.</li>
-                                
                                 <li>Created and maintained Azure Wiki documentation to standardize CI/CD pipelines, application deployments, and infrastructure configurations for improved team collaboration.</li>
                             </ul>
                         </div>
@@ -2217,23 +2144,14 @@ light blue
                         <div class="timeline-desc">
                             <ul>
                                 <li>Hands-on expertise in installing, configuring, and operating DevOps tools including Git, Maven, Tomcat, Jenkins, Docker, and Kubernetes.</li>
-                            
                                 <li>Built and deployed custom Docker images using Dockerfiles, pushed them to Amazon ECR, and managed containerized applications.</li>
-                            
                                 <li>Set up and managed a Minikube cluster, creating and orchestrating Pods, Deployments, and Services for containerized workloads.</li>
-                            
                                 <li>Managed source code repositories and branch strategies using Git and GitHub to enable collaborative development.</li>
-                            
                                 <li>Implemented Continuous Integration (CI) pipelines in Jenkins integrated with GitHub to automate build, test, and deployment workflows.</li>
-                            
                                 <li>Built application artifacts using Maven, deployed them to Nexus Artifactory, and utilized the Maven lifecycle for efficient build management.</li>
-                            
                                 <li>Developed and optimized Jenkins pipeline scripts to improve CI/CD efficiency and enable automated build, test, and deployment processes.</li>
-                            
                                 <li>Implemented and maintained Jenkins Master-Agent architecture to ensure scalable and high-performance CI/CD operations.</li>
-                            
                                 <li>Integrated SonarQube into CI/CD pipelines to enforce code quality standards and detect bugs, vulnerabilities, and code smells early.</li>
-                            
                                 <li>Used Jira for issue tracking, task management, and collaboration to ensure timely delivery of development tasks.</li>
                             </ul>
                         </div>
@@ -2259,10 +2177,8 @@ light blue
                 <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
                 <p class="section-subtitle">Real-world projects showcasing cloud architecture and DevOps excellence</p>
             </div>
-        
+
             <div class="projects-grid">
-        
-                <!-- AWS Infrastructure Terraform -->
                 <div class="project-card reveal">
                     <div class="project-image">
                         <div class="project-bg"><i class="fab fa-aws"></i></div>
@@ -2270,9 +2186,7 @@ light blue
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">AWS Infrastructure Terraform</h3>
-                        <p class="project-desc">
-                            Built modular AWS infrastructure using Terraform to provision VPC, EC2, and security resources with automated CI/CD deployments via GitHub Actions across dev, staging, and production environments.
-                        </p>
+                        <p class="project-desc">Built modular AWS infrastructure using Terraform to provision VPC, EC2, and security resources with automated CI/CD deployments via GitHub Actions across dev, staging, and production environments.</p>
                         <div class="project-tech">
                             <span class="tech-tag">AWS</span>
                             <span class="tech-tag">Terraform</span>
@@ -2281,17 +2195,12 @@ light blue
                             <span class="tech-tag">Infrastructure as Code</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/prasanth624/AWS-Infrastructure-Terraform" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                            <a href="https://github.com/prasanth624/AWS-Infrastructure-Terraform" class="project-link" target="_blank">
-                                <i class="fas fa-book"></i> Documentation
-                            </a>
+                            <a href="https://github.com/prasanth624/AWS-Infrastructure-Terraform" class="project-link" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://github.com/prasanth624/AWS-Infrastructure-Terraform" class="project-link" target="_blank"><i class="fas fa-book"></i> Documentation</a>
                         </div>
                     </div>
                 </div>
-        
-                <!-- Azure Infrastructure Terraform -->
+
                 <div class="project-card reveal">
                     <div class="project-image">
                         <div class="project-bg"><i class="fab fa-microsoft"></i></div>
@@ -2299,9 +2208,7 @@ light blue
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Azure Infrastructure Terraform</h3>
-                        <p class="project-desc">
-                            Built modular Azure infrastructure using Terraform for networking, compute, and storage with automated CI/CD deployments using GitHub Actions across dev and production environments.
-                        </p>
+                        <p class="project-desc">Built modular Azure infrastructure using Terraform for networking, compute, and storage with automated CI/CD deployments using GitHub Actions across dev and production environments.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Azure</span>
                             <span class="tech-tag">Terraform</span>
@@ -2310,17 +2217,12 @@ light blue
                             <span class="tech-tag">DevOps</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/prasanth624/Azure-Infrastructure-Terraform" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                            <a href="https://github.com/prasanth624/Azure-Infrastructure-Terraform" class="project-link" target="_blank">
-                                <i class="fas fa-book"></i> Documentation
-                            </a>
+                            <a href="https://github.com/prasanth624/Azure-Infrastructure-Terraform" class="project-link" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://github.com/prasanth624/Azure-Infrastructure-Terraform" class="project-link" target="_blank"><i class="fas fa-book"></i> Documentation</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Kubernetes Blue-Green Deployment -->
                 <div class="project-card reveal">
                     <div class="project-image">
                         <div class="project-bg"><i class="fas fa-dharmachakra"></i></div>
@@ -2328,11 +2230,7 @@ light blue
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Kubernetes Blue-Green Deployment</h3>
-                        <p class="project-desc">
-                            Implemented zero-downtime application deployments in Kubernetes using 
-                            Blue-Green deployment strategy with service-based traffic switching 
-                            to ensure safe releases and quick rollback capability.
-                        </p>
+                        <p class="project-desc">Implemented zero-downtime application deployments in Kubernetes using Blue-Green deployment strategy with service-based traffic switching to ensure safe releases and quick rollback capability.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Kubernetes</span>
                             <span class="tech-tag">Docker</span>
@@ -2341,17 +2239,12 @@ light blue
                             <span class="tech-tag">Blue-Green Deployment</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/prasanth624/Kubernetes-blue-green-deployment" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                            <a href="https://github.com/prasanth624/Kubernetes-blue-green-deployment" class="project-link" target="_blank">
-                                <i class="fas fa-book"></i> Documentation
-                            </a>
+                            <a href="https://github.com/prasanth624/Kubernetes-blue-green-deployment" class="project-link" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://github.com/prasanth624/Kubernetes-blue-green-deployment" class="project-link" target="_blank"><i class="fas fa-book"></i> Documentation</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Cloud Cost Optimization -->
                 <div class="project-card reveal">
                     <div class="project-image">
                         <div class="project-bg"><i class="fas fa-dollar-sign"></i></div>
@@ -2359,11 +2252,7 @@ light blue
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Cloud Cost Optimization</h3>
-                        <p class="project-desc">
-                            Implemented cloud cost optimization strategies to identify unused resources,
-                            right-size infrastructure, and reduce cloud spending across workloads while
-                            maintaining performance and efficiency.
-                        </p>
+                        <p class="project-desc">Implemented cloud cost optimization strategies to identify unused resources, right-size infrastructure, and reduce cloud spending across workloads while maintaining performance and efficiency.</p>
                         <div class="project-tech">
                             <span class="tech-tag">AWS</span>
                             <span class="tech-tag">Azure</span>
@@ -2372,17 +2261,12 @@ light blue
                             <span class="tech-tag">Cost Management</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/prasanth624/Cost-optimization-in-Cloud" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                            <a href="https://github.com/prasanth624/Cost-optimization-in-Cloud" class="project-link" target="_blank">
-                                <i class="fas fa-book"></i> Documentation
-                            </a>
+                            <a href="https://github.com/prasanth624/Cost-optimization-in-Cloud" class="project-link" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://github.com/prasanth624/Cost-optimization-in-Cloud" class="project-link" target="_blank"><i class="fas fa-book"></i> Documentation</a>
                         </div>
                     </div>
                 </div>
-        
-                <!-- ArgoCD App-of-Apps GitOps Deployment -->
+
                 <div class="project-card reveal">
                     <div class="project-image">
                         <div class="project-bg"><i class="fas fa-circle-nodes"></i></div>
@@ -2390,11 +2274,7 @@ light blue
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">ArgoCD App-of-Apps GitOps Deployment</h3>
-                        <p class="project-desc">
-                            Implemented GitOps-based Kubernetes deployments using ArgoCD App-of-Apps 
-                            pattern to manage multiple applications from a single parent configuration 
-                            with automated synchronization and version-controlled infrastructure.
-                        </p>
+                        <p class="project-desc">Implemented GitOps-based Kubernetes deployments using ArgoCD App-of-Apps pattern to manage multiple applications from a single parent configuration with automated synchronization and version-controlled infrastructure.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Kubernetes</span>
                             <span class="tech-tag">ArgoCD</span>
@@ -2403,12 +2283,8 @@ light blue
                             <span class="tech-tag">Docker</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/prasanth624/ArgoCD-app-of-apps" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Source Code
-                            </a>
-                            <a href="https://github.com/prasanth624/ArgoCD-app-of-apps" class="project-link" target="_blank">
-                                <i class="fas fa-book"></i> Documentation
-                            </a>
+                            <a href="https://github.com/prasanth624/ArgoCD-app-of-apps" class="project-link" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://github.com/prasanth624/ArgoCD-app-of-apps" class="project-link" target="_blank"><i class="fas fa-book"></i> Documentation</a>
                         </div>
                     </div>
                 </div>
@@ -2424,9 +2300,8 @@ light blue
                 <h2 class="section-title">Professional <span class="highlight">Certifications</span></h2>
                 <p class="section-subtitle">Industry-recognized certifications validating cloud & DevOps expertise</p>
             </div>
-    
+
             <div class="certs-grid">
-    
                 <div class="cert-card reveal">
                     <div class="cert-icon"><i class="fab fa-aws"></i></div>
                     <div class="cert-info">
@@ -2435,7 +2310,6 @@ light blue
                         <div class="cert-year">2026</div>
                     </div>
                 </div>
-    
                 <div class="cert-card reveal">
                     <div class="cert-icon"><i class="fab fa-google"></i></div>
                     <div class="cert-info">
@@ -2444,7 +2318,6 @@ light blue
                         <div class="cert-year">2025</div>
                     </div>
                 </div>
-    
                 <div class="cert-card reveal">
                     <div class="cert-icon"><i class="fas fa-infinity"></i></div>
                     <div class="cert-info">
@@ -2453,7 +2326,6 @@ light blue
                         <div class="cert-year">2020</div>
                     </div>
                 </div>
-    
             </div>
         </div>
     </section>
@@ -2473,31 +2345,26 @@ light blue
                     <h3 class="service-title">Cloud Architecture</h3>
                     <p class="service-desc">Design scalable, secure, and cost-optimized cloud architectures on AWS, Azure, and GCP with best practices.</p>
                 </div>
-
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-infinity"></i></div>
                     <h3 class="service-title">CI/CD Pipeline Design</h3>
                     <p class="service-desc">Build automated pipelines for continuous integration, delivery, and deployment with zero-downtime releases.</p>
                 </div>
-
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-dharmachakra"></i></div>
                     <h3 class="service-title">Kubernetes & Containers</h3>
                     <p class="service-desc">Deploy and manage containerized applications with Kubernetes, Helm, and service mesh configurations.</p>
                 </div>
-
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-file-code"></i></div>
                     <h3 class="service-title">Infrastructure as Code</h3>
                     <p class="service-desc">Automate infrastructure provisioning with Terraform, Ansible, and Pulumi for consistent environments.</p>
                 </div>
-
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-chart-line"></i></div>
                     <h3 class="service-title">Monitoring & SRE</h3>
                     <p class="service-desc">Implement observability with Prometheus, Grafana, ELK Stack, and set up SRE practices for reliability.</p>
                 </div>
-
                 <div class="service-card reveal">
                     <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
                     <h3 class="service-title">DevSecOps</h3>
@@ -2519,55 +2386,24 @@ light blue
             <div class="contact-grid">
                 <div class="contact-info reveal">
                     <h3>Ready to Build Something <span style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Amazing?</span></h3>
-                    <p>
-                        Whether you need cloud architecture design, CI/CD pipeline setup, or Kubernetes 
-                        management, I'm here to help. Let's build scalable and reliable infrastructure together.
-                    </p>
-
+                    <p>Whether you need cloud architecture design, CI/CD pipeline setup, or Kubernetes management, I'm here to help. Let's build scalable and reliable infrastructure together.</p>
                     <div class="contact-methods">
-                        <!-- Email -->
-                        <a 
-                            href="mailto:prasanth21999@gmail.com"
-                            class="contact-method"
-                            aria-label="Send email to Prasanth B"
-                        >
-                            <div class="contact-method-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
+                        <a href="mailto:prasanth21999@gmail.com" class="contact-method">
+                            <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
                             <div>
                                 <div class="contact-method-label">Email</div>
                                 <div class="contact-method-value">prasanth21999@gmail.com</div>
                             </div>
                         </a>
-                    
-                        <!-- LinkedIn -->
-                        <a 
-                            href="https://www.linkedin.com/in/prasanth-bala-devops"
-                            class="contact-method"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Prasanth Bala LinkedIn profile"
-                        >
-                            <div class="contact-method-icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </div>
+                        <a href="https://www.linkedin.com/in/prasanth-bala-devops" class="contact-method" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-method-icon"><i class="fab fa-linkedin-in"></i></div>
                             <div>
                                 <div class="contact-method-label">LinkedIn</div>
                                 <div class="contact-method-value">linkedin.com/in/prasanth-bala-devops</div>
                             </div>
                         </a>
-                    
-                        <!-- Location -->
-                        <a 
-                            href="https://www.google.com/maps/place/India"
-                            class="contact-method"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Location: India"
-                        >
-                            <div class="contact-method-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
+                        <a href="https://www.google.com/maps/place/India" class="contact-method" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-method-icon"><i class="fas fa-map-marker-alt"></i></div>
                             <div>
                                 <div class="contact-method-label">Location</div>
                                 <div class="contact-method-value">India</div>
@@ -2612,45 +2448,15 @@ light blue
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <!-- Brand -->
             <div class="footer-brand">
                 <h4>&lt;Bala Prasanth Babu /&gt;</h4>
-                <p>
-                    DevOps Engineer passionate about building scalable infrastructure 
-                    and automating everything.
-                </p>
+                <p>DevOps Engineer passionate about building scalable infrastructure and automating everything.</p>
                 <div class="footer-social">
-                    <a 
-                        href="https://github.com/prasanth624"
-                        class="social-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub profile"
-                    >
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a 
-                        href="https://www.linkedin.com/in/prasanth-bala-devops"
-                        class="social-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn profile"
-                    >
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a 
-                        href="https://medium.com/@bprasanth3456"
-                        class="social-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Medium profile"
-                    >
-                        <i class="fab fa-medium"></i>
-                    </a>
+                    <a href="https://github.com/prasanth624" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/prasanth-bala-devops" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://medium.com/@bprasanth3456" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i></a>
                 </div>
             </div>
-    
-            <!-- Quick Links -->
             <div>
                 <h4 class="footer-title">Quick Links</h4>
                 <ul class="footer-links">
@@ -2660,8 +2466,6 @@ light blue
                     <li><a href="#projects">Projects</a></li>
                 </ul>
             </div>
-    
-            <!-- Services -->
             <div>
                 <h4 class="footer-title">Services</h4>
                 <ul class="footer-links">
@@ -2671,8 +2475,6 @@ light blue
                     <li><a href="#services">DevSecOps</a></li>
                 </ul>
             </div>
-    
-            <!-- Resources -->
             <div>
                 <h4 class="footer-title">Resources</h4>
                 <ul class="footer-links">
@@ -2683,7 +2485,6 @@ light blue
                 </ul>
             </div>
         </div>
-        
         <div class="footer-bottom">
             <p>&copy; <span id="year"></span> Bala Prasanth Babu. All rights reserved.</p>
             <p>Built with ❤️ and DevOps mindset</p>
@@ -2697,7 +2498,7 @@ light blue
 
     <script>
         // ========================================
-        // PARTICLE ANIMATION — SKY BLUE THEME
+        // PARTICLE ANIMATION
         // ========================================
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
@@ -2712,10 +2513,7 @@ light blue
         window.addEventListener('resize', resizeCanvas);
 
         class Particle {
-            constructor() {
-                this.reset();
-            }
-
+            constructor() { this.reset(); }
             reset() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
@@ -2724,16 +2522,11 @@ light blue
                 this.speedY = (Math.random() - 0.5) * 0.5;
                 this.opacity = Math.random() * 0.3 + 0.05;
             }
-
             update() {
                 this.x += this.speedX;
                 this.y += this.speedY;
-
-                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
-                    this.reset();
-                }
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
             }
-
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -2745,9 +2538,7 @@ light blue
         function initParticles() {
             particles = [];
             const numParticles = Math.min(80, Math.floor(window.innerWidth / 15));
-            for (let i = 0; i < numParticles; i++) {
-                particles.push(new Particle());
-            }
+            for (let i = 0; i < numParticles; i++) particles.push(new Particle());
         }
 
         function connectParticles() {
@@ -2756,7 +2547,6 @@ light blue
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
-
                     if (distance < 150) {
                         ctx.beginPath();
                         ctx.strokeStyle = `rgba(2, 132, 199, ${0.06 * (1 - distance / 150)})`;
@@ -2771,10 +2561,7 @@ light blue
 
         function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
+            particles.forEach(p => { p.update(); p.draw(); });
             connectParticles();
             requestAnimationFrame(animateParticles);
         }
@@ -2789,17 +2576,8 @@ light blue
         const backToTop = document.getElementById('backToTop');
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-
-            if (window.scrollY > 500) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+            backToTop.classList.toggle('visible', window.scrollY > 500);
         });
 
         // ========================================
@@ -2816,22 +2594,13 @@ light blue
         }
 
         // ========================================
-        // SCROLL REVEAL ANIMATION
+        // SCROLL REVEAL
         // ========================================
-        const revealElements = document.querySelectorAll('.reveal');
-
         const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        revealElements.forEach(el => revealObserver.observe(el));
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
         // ========================================
         // COUNTER ANIMATION
@@ -2847,22 +2616,14 @@ light blue
                         const target = +counter.getAttribute('data-target');
                         const duration = 2000;
                         const start = performance.now();
-
                         function updateCounter(currentTime) {
                             const elapsed = currentTime - start;
                             const progress = Math.min(elapsed / duration, 1);
                             const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-                            const current = Math.floor(easeOutQuart * target);
-                            
-                            counter.textContent = current;
-                            
-                            if (progress < 1) {
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                counter.textContent = target;
-                            }
+                            counter.textContent = Math.floor(easeOutQuart * target);
+                            if (progress < 1) requestAnimationFrame(updateCounter);
+                            else counter.textContent = target;
                         }
-
                         requestAnimationFrame(updateCounter);
                     });
                 }
@@ -2872,116 +2633,155 @@ light blue
         counters.forEach(counter => counterObserver.observe(counter));
 
         // ========================================
-        // TERMINAL TYPING EFFECT
+        // TERMINAL TYPING ANIMATION — LIVE IN ORBIT
         // ========================================
         const terminalCommands = [
+            { type: 'command', text: 'kubectl get pods' },
+            { type: 'output',  text: 'All pods running ✓' },
+            { type: 'command', text: 'terraform apply' },
+            { type: 'output',  text: 'Infrastructure deployed! 🚀' },
             { type: 'command', text: 'docker build -t app:v2 .' },
-            { type: 'output', text: 'Successfully built 🐳' },
+            { type: 'output',  text: 'Successfully built 🐳' },
             { type: 'command', text: 'helm upgrade --install app' },
-            { type: 'output', text: 'Release deployed! ⎈' },
-            { type: 'command', text: 'terraform plan' },
-            { type: 'output', text: '12 resources to add ✓' },
+            { type: 'output',  text: 'Release deployed! ⎈' },
             { type: 'command', text: 'ansible-playbook deploy.yml' },
-            { type: 'output', text: 'All tasks completed! 🎯' },
+            { type: 'output',  text: 'All tasks completed! 🎯' },
+            { type: 'command', text: 'argocd app sync prod' },
+            { type: 'output',  text: 'Synced successfully ✓' },
+            { type: 'command', text: 'snyk test --all-projects' },
+            { type: 'output',  text: 'No vulnerabilities found 🛡️' },
+            { type: 'command', text: 'aws s3 ls' },
+            { type: 'output',  text: '3 buckets listed ☁️' },
         ];
 
+        const terminalBody = document.getElementById('terminal-body');
+        const MAX_VISIBLE_LINES = 5;
         let cmdIndex = 0;
 
-        function typeCommand() {
-            const terminalBody = document.querySelector('.terminal-body');
-            if (!terminalBody) return;
-
-            const cmd = terminalCommands[cmdIndex % terminalCommands.length];
-            const lines = terminalBody.querySelectorAll('.terminal-line');
-            
-            if (lines.length > 5) {
-                lines[0].remove();
-                lines[1].remove();
-            }
-
-            const oldCursor = terminalBody.querySelector('.typing-cursor');
-            if (oldCursor && oldCursor.parentElement) {
-                oldCursor.parentElement.remove();
-            }
-
-            const newLine = document.createElement('div');
-            newLine.classList.add('terminal-line');
-
-            if (cmd.type === 'command') {
-                newLine.innerHTML = `<span class="prompt">prasanth@cloud:~$ </span><span class="command">${cmd.text}</span>`;
-            } else {
-                newLine.innerHTML = `<span class="output">${cmd.text}</span>`;
-            }
-            terminalBody.appendChild(newLine);
-
-            const cursorLine = document.createElement('div');
-            cursorLine.classList.add('terminal-line');
-            cursorLine.innerHTML = `<span class="prompt">prasanth@cloud:~$ </span><span class="typing-cursor"></span>`;
-            terminalBody.appendChild(cursorLine);
-
-            cmdIndex++;
+        function getTerminalLines() {
+            return terminalBody.querySelectorAll('.terminal-line');
         }
 
-        setInterval(typeCommand, 3000);
+        function trimTerminal() {
+            // Keep only the last MAX_VISIBLE_LINES lines (including the active prompt)
+            const lines = getTerminalLines();
+            while (lines.length > MAX_VISIBLE_LINES) {
+                terminalBody.removeChild(lines[0]);
+            }
+        }
 
-         // ========================================
-        // FORM SUBMIT HANDLER
+        function typeCommand(text, lineEl, callback) {
+            let i = 0;
+            const cmdSpan = document.createElement('span');
+            cmdSpan.className = 'command';
+            lineEl.appendChild(cmdSpan);
+
+            // Add cursor
+            const cursor = document.createElement('span');
+            cursor.className = 'typing-cursor';
+            lineEl.appendChild(cursor);
+
+            function typeChar() {
+                if (i < text.length) {
+                    cmdSpan.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeChar, 45 + Math.random() * 35);
+                } else {
+                    // Remove cursor after typing done
+                    if (cursor.parentNode) cursor.parentNode.removeChild(cursor);
+                    setTimeout(callback, 400);
+                }
+            }
+            typeChar();
+        }
+
+        function addOutputLine(text, callback) {
+            const line = document.createElement('div');
+            line.className = 'terminal-line';
+            const outputSpan = document.createElement('span');
+            outputSpan.className = 'output';
+            outputSpan.textContent = text;
+            line.appendChild(outputSpan);
+            terminalBody.appendChild(line);
+            trimTerminal();
+            setTimeout(callback, 800);
+        }
+
+        function addPromptWithCursor() {
+            const line = document.createElement('div');
+            line.className = 'terminal-line';
+            const prompt = document.createElement('span');
+            prompt.className = 'prompt';
+            prompt.textContent = 'prasanth@cloud:~$ ';
+            line.appendChild(prompt);
+
+            const cursor = document.createElement('span');
+            cursor.className = 'typing-cursor';
+            line.appendChild(cursor);
+
+            terminalBody.appendChild(line);
+            trimTerminal();
+        }
+
+        function runNextCommand() {
+            // Get the pair: command + output
+            const cmdEntry = terminalCommands[cmdIndex];
+            const outEntry = terminalCommands[cmdIndex + 1];
+
+            // Remove the idle cursor prompt before typing
+            const lines = getTerminalLines();
+            const lastLine = lines[lines.length - 1];
+            if (lastLine) {
+                // Clear the last line to re-type into it
+                lastLine.innerHTML = '';
+                const prompt = document.createElement('span');
+                prompt.className = 'prompt';
+                prompt.textContent = 'prasanth@cloud:~$ ';
+                lastLine.appendChild(prompt);
+
+                typeCommand(cmdEntry.text, lastLine, () => {
+                    if (outEntry && outEntry.type === 'output') {
+                        addOutputLine(outEntry.text, () => {
+                            cmdIndex = (cmdIndex + 2) % terminalCommands.length;
+                            // Add a new prompt with blinking cursor, then wait
+                            addPromptWithCursor();
+                            setTimeout(runNextCommand, 1500);
+                        });
+                    } else {
+                        cmdIndex = (cmdIndex + 1) % terminalCommands.length;
+                        addPromptWithCursor();
+                        setTimeout(runNextCommand, 1500);
+                    }
+                });
+            }
+        }
+
+        // Initialize terminal: start with a prompt then begin typing
+        setTimeout(() => {
+            // The HTML already has one prompt line with cursor — start typing into it
+            runNextCommand();
+        }, 1800);
+
+        // ========================================
+        // FOOTER YEAR
+        // ========================================
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ========================================
+        // FORM HANDLER
         // ========================================
         function handleSubmit(e) {
             e.preventDefault();
-        
             const btn = e.target.querySelector('.btn-submit');
             const originalText = btn.innerHTML;
-        
-            btn.innerHTML = '<i class="fas fa-tools"></i> Feature in Development';
-            btn.style.background = 'linear-gradient(135deg,#f59e0b,#f97316)';
-            btn.disabled = true;
-        
+            btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            btn.style.background = 'linear-gradient(135deg, #10b981, #06b6d4)';
             setTimeout(() => {
                 btn.innerHTML = originalText;
                 btn.style.background = '';
-                btn.disabled = false;
+                e.target.reset();
             }, 3000);
         }
-
-        // ========================================
-        // SMOOTH SCROLL
-        // ========================================
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // ========================================
-        // ACTIVE NAV LINK HIGHLIGHT — SKY BLUE
-        // ========================================
-        const sections = document.querySelectorAll('section[id]');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.style.color = '';
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.style.color = '#0284c7';
-                }
-            });
-        });
-    </script>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
