@@ -2772,10 +2772,16 @@ light blue
         // ========================================
         function handleSubmit(e) {
             e.preventDefault();
+        
             const btn = e.target.querySelector('.btn-submit');
             const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            btn.style.background = 'linear-gradient(135deg, #10b981, #06b6d4)';
+        
+            // Change text
+            btn.innerHTML = '🚧 Feature in Development';
+        
+            // Optional color (orange warning style)
+            btn.style.background = 'linear-gradient(135deg, #f59e0b, #ef4444)';
+        
             setTimeout(() => {
                 btn.innerHTML = originalText;
                 btn.style.background = '';
